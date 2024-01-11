@@ -1,7 +1,10 @@
 import React from 'react';
-import { View, Text, FlatList } from 'react-native';
+import { SafeAreaView, View, Text, FlatList } from 'react-native';
+import  { useHeaderHeight } from '@react-navigation/elements'
 
-const Feed = () => {
+export default function Feed() {
+    const height = useHeaderHeight()
+
     const data = [
         { id: 1, title: 'Post 1' },
         { id: 2, title: 'Post 2' },
@@ -11,19 +14,23 @@ const Feed = () => {
 
     const renderItem = ({ item }) => (
         <View style={{ padding: 10 }}>
-            <Text>{item.title}</Text>
+            <Text style={{ fontFamily: 'UrbanistSemiBold', fontSize: 23 }}>{item.title}</Text>
         </View>
     );
 
     return (
-        <View>
-            <FlatList
-                data={data}
-                renderItem={renderItem}
-                keyExtractor={(item) => item.id.toString()}
-            />
-        </View>
+        <SafeAreaView style={{ flex: 1, paddingTop: height }}>
+            <View>
+                <FlatList
+                    data={data}
+                    renderItem={renderItem}
+                    keyExtractor={(item) => item.id.toString()}
+                />
+            </View>
+
+
+        </SafeAreaView>
     );
 };
 
-export default Feed;
+
