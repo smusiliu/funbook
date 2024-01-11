@@ -14,6 +14,8 @@ import Conversations from './src/screens/Conversations';
 import { Ionicons } from '@expo/vector-icons';
 import { useFonts } from 'expo-font';
 import { Urbanist_400Regular, Urbanist_500Medium, Urbanist_600SemiBold } from '@expo-google-fonts/urbanist';
+import SFProReg from './assets/fonts/SF-Pro-Text-Regular.otf';
+import SFMedium from './assets/fonts/SF-Pro-Text-Medium.otf'
 
 import * as SplashScreen from 'expo-splash-screen';
 
@@ -64,7 +66,8 @@ export default function App() {
         UrbanistRegular: Urbanist_400Regular,
         UrbanistMedium: Urbanist_500Medium,
         UrbanistSemiBold: Urbanist_600SemiBold,
-       
+       SFProReg,
+       SFMedium
     })
 
     useEffect(() => {

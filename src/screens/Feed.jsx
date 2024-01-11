@@ -14,7 +14,7 @@ export default function Feed() {
 
     const renderItem = ({ item }) => (
         <View style={{ padding: 10 }}>
-            <Text style={{ fontFamily: 'UrbanistSemiBold', fontSize: 23 }}>{item.title}</Text>
+            <Text style={{ fontFamily: 'SFMedium', fontSize: 21 }}>{item.title}</Text>
         </View>
     );
 
